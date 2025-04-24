@@ -1,0 +1,9 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4.1.0-management
+    ports:
+      - 5672:5672 # rabbimtmq port
+      - 15672:15672 # rabbitmq management port
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
