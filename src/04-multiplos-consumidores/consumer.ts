@@ -4,7 +4,7 @@ async function consumer() {
   const connection = await amqp.connect("amqp://admin:admin@localhost:5672");
   const channel = await connection.createChannel();
 
-  const queue = "produto";
+  const queue = "products";
 
   await channel.assertQueue(queue); // create a queue if it doesn't exist
   console.log(`[x] Waiting for messages in ${queue}. To exit press CTRL+C`);
